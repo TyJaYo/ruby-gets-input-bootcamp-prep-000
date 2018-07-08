@@ -131,11 +131,11 @@ Once we store the return value of `gets` in a variable, we can treat that variab
 Remember to run `learn submit` so you can move on to the next lesson. 
 
 ### Advanced: How `gets` gets input from the terminal
-We already know, in general terms, how the `puts` method outputs text to the terminal, but here's a reminder from an earlier lesson, "Puts, Print and Return":
+We already know, in general terms, how the `puts` method outputs text to the terminal, but here's a reminder from an earlier lesson, "Puts and Return":
 
->How do the puts and print methods actually output text to your console? They use the `$stdout` global variable provided to us by Ruby. You don't need to worry about global variables right now. For the purposes of understanding how puts and print work, we just need to understand the following:
+>How do the `puts` and `print` methods actually output text to your console? They use the `$stdout` global variable provided to us by Ruby. (You don't need to worry about writing global variables right now.) For the purposes of understanding how `puts` and `print` work, we just need to understand the following:
 
->Your computer has a stdout file that communicates with your operating system. So, puts and print actually send output to the `$stdout` variable. The `$stdout` variable sends that information to the stdout file on your computer which in turn communicates with your operating system which in turn outputs that information to the console.
+>Ruby uses the `$stdout` global variable to communicate with your computers standard output stream (this happens through various other intermediaries which we won't delve into now). So in a basic sense, `puts` and `print` actually use the `$stdout` variable to send the information to the output stream on your computer which communicates with your operating system and outputs that information to the console.
 
 The `gets` method works similarly. Just like your computer has a standard output file, it has a standard input file. When you enter text in your terminal, you are writing to that file. And, just like Ruby has a `$stdout` global variable, it has a `$stdin` global variable. The `$stdin` variable holds a stream from the standard input. It can be used to read input from the console.
 
